@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumPy/Pandas Code Optimizer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            NumPy & Pandas Optimizer
+        </div>
+        <button id="theme-toggle" class="theme-toggle">
+            <span class="material-icons">dark_mode</span>
+        </button>
+    </nav>
+    
+    <div class="container">
+        <div>
+            <h2>Input Your Code</h2>
+            <textarea id="code-editor"></textarea>
+            <button id="optimize-btn">Optimize Code</button>
+        </div>
+
+        <div id="error-container" class="hidden"></div>
+
+        <div id="results-container" class="hidden">
+            <h2>Results</h2>
+            <div id="all-results"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
